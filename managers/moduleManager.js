@@ -21,7 +21,7 @@ const load = async () => {
             ) {
                 modules[info.name] = new Module(
                     info,
-                    require("./modules/" + files[i] + "/" + info.main)
+                    require("../modules/" + files[i] + "/" + info.main)
                 );
                 console.log(info.name + " loaded");
             } else {

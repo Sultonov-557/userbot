@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 module.exports = async function getConfig() {
-    let out = await fs.readFileSync("./config.json", (err, file) => {
+    let out = await fs.readFileSync("./config/config.json", (err, file) => {
         if (err) {
             throw err;
         }
