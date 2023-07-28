@@ -6,17 +6,23 @@ const moduleManager = require("../../managers/moduleManager.js");
  * @param {telegram.Api.Message} msg
  */
 
-module.exports = async function (client, msg) {
+module.exports["list"] = async (client, msg) => {
     const modules = await moduleManager.getModules();
     let moduleList = "";
     for (i in modules) {
+        let triggers = modules[i].info.triggers;
+        console.log(triggers);
+        let uses = "";
+        for (j in triggers) {
+            uses += triggers[i];
+        }
         moduleList +=
             modules[i].info.name +
             ":\n" +
             "   " +
             modules[i].info.description +
-            "\n   usage: " +
-            modules[i].info.trigger +
+            "\n   usages: " +
+            uses +
             "\n";
     }
     let out = "modules:\n" + moduleList;

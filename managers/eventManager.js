@@ -11,19 +11,22 @@ module.exports = async function (modules, client) {
     const me = await client.getMe();
     for (i in modules) {
         const module = modules[i];
+        const triggers = module.info.triggers;
         console.log("loading events of " + module.info.name);
         client.addEventHandler((ev) => {
             const txt = ev.message.text;
             const msg = ev.message;
-            if (ev.message.senderId.equals(me.id)) {
-                if (txt.indexOf(module.info.trigger) == 0) {
-                    if (module.info.needArg) {
-                        let arg = txt.split(" ");
-                        arg.splice(0, 1);
-                        arg = arg.join(" ");
-                        module.main(client, msg, arg);
-                    } else {
-                        module.main(client, msg);
+            for (j in triggers) {
+                if (ev.message.senderId.equals(me.id)) {
+                    if (txt.indexOf(j) == 0) {
+                        if (module.info.needArg) {
+                            let arg = txt.split(" ");
+                            arg.splice(0, 1);
+                            arg = arg.join(" ");
+                            module.main[triggers[j]](client, msg, arg);
+                        } else {
+                            module.main[triggers[j]](client, msg);
+                        }
                     }
                 }
             }

@@ -3,6 +3,6 @@
     "version":"0.1",
     "main":"spell.js",
     "description":"spells a word or words",
-    "trigger":".spell ",
+    "triggers":{".spell ":"spell"},
     "needArg":true
 }

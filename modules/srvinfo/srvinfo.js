@@ -7,7 +7,7 @@ const http = require("https");
  * @param {string} arg
  */
 
-module.exports = async function (client, msg, arg) {
+module.exports["srvinfo"] = async (client, msg, arg) => {
     http.get("https://api.mcsrvstat.us/2/" + arg, (res) => {
         str = "";
         res.on("data", (data) => {

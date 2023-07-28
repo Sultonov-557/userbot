@@ -4,7 +4,7 @@ const telegram = require("telegram");
  * @param {telegram.client.message} msg
  */
 
-module.exports = async function (client, msg, arg) {
+module.exports["spell"] = async (client, msg, arg) => {
     text = "";
     for (i in arg) {
         text += arg[i];

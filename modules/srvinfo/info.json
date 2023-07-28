@@ -3,6 +3,6 @@
     "version":"0.1",
     "main":"srvinfo.js",
     "description":"displays info about minecraft servers",
-    "trigger":".srvinfo ",
+    "triggers":{".srvinfo ":"srvinfo"},
     "needArg":true
 }
