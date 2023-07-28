@@ -1,0 +1,8 @@
+{
+    "name":"spell",
+    "version":"0.1",
+    "main":"spell.js",
+    "description":"spells a word or words",
+    "trigger":".spell ",
+    "needArg":true
+}

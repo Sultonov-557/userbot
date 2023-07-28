@@ -1,0 +1,8 @@
+{
+    "name":"info",
+    "version":"0.1",
+    "main":"info.js",
+    "description":"list of modules that installed to the userbot",
+    "trigger":".info",
+    "needArg":false
+}
