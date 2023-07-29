@@ -1,8 +1,0 @@
-{
-  "name": "list",
-  "version": "0.1",
-  "main": "list.js",
-  "description": "list of modules that installed to the userbot",
-  "triggers": { ".stickmsg": "stickmsg" },
-  "needArg": false
-}
