@@ -1,0 +1,8 @@
+{
+    "name": "spam",
+    "version": "0.1",
+    "main": "spam.js",
+    "description": "spams word",
+    "triggers": { ".spam ": "spam" },
+    "needArg": true
+}
