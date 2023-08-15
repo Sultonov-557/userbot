@@ -1,0 +1,9 @@
+{
+    "name":"list",
+    "version":"0.1",
+    "main":"steal.js",
+    "description":"takes the usernames soon as they are available",
+    "triggers":{".adduser ":"adduser",".id ":"id",".userlist":"userlist"},
+    "needArg":true,
+    "start":"start"
+}
