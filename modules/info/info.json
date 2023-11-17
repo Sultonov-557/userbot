@@ -1,0 +1,8 @@
+{
+	"name": "info",
+	"version": "0.1",
+	"main": "info.js",
+	"description": "gives info about users",
+	"triggers": { ".info": "info" },
+	"needArg": true
+}

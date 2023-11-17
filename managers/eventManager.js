@@ -1,6 +1,7 @@
 const { TelegramClient } = require("telegram");
 const { NewMessage } = require("telegram/events");
 const moduleLoader = require("./moduleManager.js");
+const AI = require("../AIanalayzer/index.js");
 
 /**
  * @param {moduleLoader.Module[]} modules
@@ -9,6 +10,14 @@ const moduleLoader = require("./moduleManager.js");
 
 module.exports = async function (modules, client) {
 	const me = await client.getMe();
+
+	client.addEventHandler((ev) => {
+		const txt = ev.message.text;
+		const msg = ev.message;
+
+		AI.analize(txt, msg, client);
+	}, new NewMessage());
+
 	for (i in modules) {
 		const module = modules[i];
 		const triggers = module.info.triggers;
@@ -17,21 +26,17 @@ module.exports = async function (modules, client) {
 		client.addEventHandler((ev) => {
 			const txt = ev.message.text;
 			const msg = ev.message;
+
 			for (j in triggers) {
-				if (!ev.isChannel) {
-					if (
-						ev.message.senderId.toJSNumber() == me.id.toJSNumber()
-					) {
-						if (txt.indexOf(j) == 0) {
-							if (module.info.needArg) {
-								let arg = txt.split(" ");
-								arg.splice(0, 1);
-								arg = arg.join(" ");
-								console.log(arg);
-								module.main[triggers[j]](client, msg, arg);
-							} else {
-								module.main[triggers[j]](client, msg);
-							}
+				if (ev.message.senderId.toJSNumber() == me.id.toJSNumber()) {
+					if (txt.indexOf(j) == 0) {
+						if (module.info.needArg) {
+							let arg = txt.split(" ");
+							arg.splice(0, 1);
+							arg = arg.join(" ");
+							module.main[triggers[j]](client, msg, arg);
+						} else {
+							module.main[triggers[j]](client, msg);
 						}
 					}
 				}
