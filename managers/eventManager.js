@@ -11,13 +11,6 @@ const AI = require("../AIanalayzer/index.js");
 module.exports = async function (modules, client) {
 	const me = await client.getMe();
 
-	client.addEventHandler((ev) => {
-		const txt = ev.message.text;
-		const msg = ev.message;
-
-		AI.analize(txt, msg, client);
-	}, new NewMessage());
-
 	for (i in modules) {
 		const module = modules[i];
 		const triggers = module.info.triggers;
