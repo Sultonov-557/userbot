@@ -1,7 +1,6 @@
 const { TelegramClient } = require("telegram");
 const { NewMessage } = require("telegram/events");
 const moduleLoader = require("./moduleManager.js");
-const AI = require("../AIanalayzer/index.js");
 
 /**
  * @param {moduleLoader.Module[]} modules

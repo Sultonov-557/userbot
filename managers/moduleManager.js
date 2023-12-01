@@ -14,16 +14,12 @@ const load = async () => {
 	for (i in files) {
 		console.log("loading module " + files[i]);
 		if (await fs.existsSync("./modules/" + files[i] + "/info.json")) {
-			const info = JSON.parse(
-				await fs.readFileSync("./modules/" + files[i] + "/info.json")
-			);
-			if (
-				await fs.existsSync("./modules/" + files[i] + "/" + info.main)
-			) {
+			const info = JSON.parse(await fs.readFileSync("./modules/" + files[i] + "/info.json"));
+			if (await fs.existsSync("./modules/" + files[i] + "/" + info.main)) {
 				modules[info.name] = new Module(
 					info,
 					require("../modules/" + files[i] + "/" + info.main),
-					"start"
+					info.start || "start"
 				);
 				console.log(info.name + " loaded");
 			} else {
