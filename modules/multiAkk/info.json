@@ -1,8 +1,0 @@
-{
-	"name": "ma",
-	"version": "0.1",
-	"main": "ma.js",
-	"description": "multi account management",
-	"triggers": { ".majoin": "ma" },
-	"needArg": true
-}

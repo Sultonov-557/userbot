@@ -7,9 +7,8 @@ module.exports = async function startBot(session, apiID, apiHash) {
 		systemVersion: "10.0.22621",
 		appVersion: "4.8.7",
 	});
-	console.log("client created");
+	client.logger.setLevel("none");
 	await client.connect();
-	console.log("client connected");
 	await client.start();
 	console.log("client started");
 	return client;

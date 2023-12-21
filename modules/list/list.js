@@ -11,7 +11,6 @@ module.exports["list"] = async (client, msg) => {
 	let moduleList = "";
 	for (i in modules) {
 		let triggers = modules[i].info.triggers;
-		console.log(triggers);
 		let uses = "";
 		for (let j in triggers) {
 			uses += triggers[j];
