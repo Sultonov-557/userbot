@@ -2,7 +2,6 @@ const startBot = require("./bot.js");
 const getConfig = require("../managers/configManager.js");
 const moduleLoader = require("../managers/moduleManager.js");
 const eventLoader = require("../managers/eventManager.js");
-const { StringSession } = require("telegram/sessions/StringSession.js");
 
 module.exports = async function (date) {
 	const config = JSON.parse(await getConfig());

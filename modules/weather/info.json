@@ -1,0 +1,8 @@
+{
+	"name": "weather",
+	"version": "0.1",
+	"main": "weather.js",
+	"description": "displays info about weather",
+	"triggers": { ".weather ": "weather" },
+	"needArg": true
+}

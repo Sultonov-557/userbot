@@ -12,6 +12,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"axios": "^1.6.2",
 		"canvas": "^2.11.2",
 		"grammy": "^1.17.2",
 		"http": "^0.0.1-security",
