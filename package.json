@@ -1,22 +1,23 @@
 {
-	"name": "userbot",
-	"type": "commonjs",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"dev": "node --watch index.js"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"axios": "^1.6.2",
-		"canvas": "^2.11.2",
-		"grammy": "^1.17.2",
-		"http": "^0.0.1-security",
-		"node-fetch": "^3.3.2",
-		"telegram": "^2.17.10"
-	}
+  "name": "userbot",
+  "type": "commonjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "canvas": "^2.11.2",
+    "grammy": "^1.17.2",
+    "http": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
+    "qrcode": "^1.5.3",
+    "telegram": "^2.17.10"
+  }
 }

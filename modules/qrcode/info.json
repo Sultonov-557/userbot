@@ -1,0 +1,8 @@
+{
+  "name": "qrcode",
+  "version": "0.1",
+  "main": "qrcode.js",
+  "description": "creates qrcodes",
+  "triggers": { ".qrcode ": "qrcode" },
+  "needArg": true
+}
