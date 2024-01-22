@@ -3,6 +3,6 @@
   "version": "0.1",
   "main": "admin.js",
   "description": "admin commands such as ban, mute, kick",
-  "triggers": { ".ban": "ban", ".mute": "mute", ".kick": "kick" },
+  "triggers": { ".ban": "ban", ".unban": "unban", ".mute": "mute", ".unmute": "unmute" },
   "needArg": true
 }
