@@ -1,0 +1,8 @@
+{
+  "name": "request",
+  "version": "0.1",
+  "main": "req.js",
+  "description": "sends request to URL",
+  "triggers": { ".req ": "req" },
+  "needArg": true
+}
