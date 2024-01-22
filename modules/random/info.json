@@ -1,0 +1,17 @@
+{
+  "name": "random generator",
+  "version": "0.1",
+  "main": "random.js",
+  "description": "generate random things",
+  "triggers": {
+    ".rnumber": "rnumber",
+    ".rname": "rname",
+    ".rfullname": "rfullname",
+    ".ranimal": "ranimal",
+    ".rcolor": "rcolor",
+    ".rtime": "rtime",
+    ".ravatar": "ravatar",
+    ".rimage": "rimage"
+  },
+  "needArg": true
+}
