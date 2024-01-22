@@ -1,0 +1,8 @@
+{
+  "name": "hash",
+  "version": "0.1",
+  "main": "hash.js",
+  "description": "hashes information",
+  "triggers": { ".hash ": "hash", ".unhash ": "unhash" },
+  "needArg": true
+}

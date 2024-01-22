@@ -1,5 +1,6 @@
 {
     "stringSession":"random letters given by telegram",
     "apiID":"random numbers given by telegram",
-    "apiHash":"random letters and numbers given by telegram"
+    "apiHash":"random letters and numbers given by telegram",
+    "secret":"32byte secret code"
 }
