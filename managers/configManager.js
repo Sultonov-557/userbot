@@ -1,12 +1,7 @@
 const fs = require("fs");
+const { config } = require("dotenv");
+const { cleanEnv, str, num } = require("envalid");
 
-module.exports = async function getConfig() {
-    let out = await fs.readFileSync("./config/config.json", (err, file) => {
-        if (err) {
-            throw err;
-        }
-        out = JSON.parse(file);
-        return JSON.parse(file);
-    });
-    return out;
-};
+config();
+
+module.exports = cleanEnv(process.env, { SESSION: str(), API_ID: num(), API_HASH: str(), SECRET: str({ default: undefined }) });
