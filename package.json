@@ -1,26 +1,29 @@
 {
-  "name": "userbot",
-  "type": "commonjs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@faker-js/faker": "^8.3.1",
-    "axios": "^1.6.2",
-    "canvas": "^2.11.2",
-    "dotenv": "^16.4.5",
-    "envalid": "^8.0.0",
-    "grammy": "^1.17.2",
-    "http": "^0.0.1-security",
-    "node-fetch": "^3.3.2",
-    "qrcode": "^1.5.3",
-    "telegram": "^2.17.10"
-  }
+	"name": "userbot",
+	"type": "commonjs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "node --watch index.js",
+		"generate": "node generate.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@faker-js/faker": "^8.4.1",
+		"axios": "^1.7.5",
+		"canvas": "^2.11.2",
+		"dotenv": "^16.4.5",
+		"envalid": "^8.0.0",
+		"grammy": "^1.29.0",
+		"http": "^0.0.1-security",
+		"input": "^1.0.1",
+		"node-fetch": "^3.3.2",
+		"qrcode": "^1.5.4",
+		"telegram": "^2.24.11",
+		"userbot": "file:"
+	}
 }
